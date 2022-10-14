@@ -1,8 +1,8 @@
 package activity;
 
 class Arithmatic{
-	int add(int a,int b) {
-		return a+b;
+	int add(int a,int b) { //add method
+		return a+b; 
 	}
 }
 class Adder extends Arithmatic{
