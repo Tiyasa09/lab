@@ -7,16 +7,16 @@ package lab20thoct;
 	    public static void main(String args[])
 	        {
 	            try {
-	                File n = new File("C:\\Users\\File Handling\\NewFile.txt");   //initialize File object and passing path as argument
-	                if (n.createNewFile()) {  //creating new file and checking condition
+	                File n = new File("C:\\Users\\File Handling\\NewFile.txt");   //initialize File object and passing an argument
+	                if (n.createNewFile()) {  // check condition
 	                    System.out.println("File " + n.getName() + " is created successfully.");
 	                }
 	                else {
 	                    System.out.println("File is already exist");
 	                }
-	            } catch (IOException e) {  //catching exception if any exception occurs
+	            } catch (IOException e) {  //catch block
 	                System.out.println("An unexpected error is occurred.");
-	                e.printStackTrace();  //printing the exception message
+	                e.printStackTrace();  //print message
 
 	        }
 	    }}
