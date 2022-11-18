@@ -15,32 +15,33 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Problem1 {
-   ArrayList<Integer> A1 = new ArrayList<Integer>();
-	  ArrayList<Integer> saveEvenNumbers(int N) {
+   ArrayList<Integer> A1 = new ArrayList<Integer>();//creating arraylist
+	  ArrayList<Integer> saveEvenNumbers(int N) {//1st method created
 		A1 = new ArrayList<Integer>();
-		for (int i = 2; i <= N; i++) {
-			if (i % 2 == 0) {
+		for (int i = 2; i <= N; i++) {//condition 
+			if (i % 2 == 0) {//condition for even number
 				A1.add(i);
 			System.out.println(i);
 		}}
 		return A1;
 	}
-	 ArrayList<Integer> printEvenNumbers() {
-		ArrayList<Integer> A2 = new ArrayList<Integer>();
+	 ArrayList<Integer> printEvenNumbers() {//2nd method 
+		ArrayList<Integer> A2 = new ArrayList<Integer>();//2nd arraylist
 		for (int i:A1) {
-			A2.add(i*2);
+			A2.add(i*2);//even number*2
 			System.out.println(i*2);
 		}
 		return A2;
 	}
-	 ArrayList<Integer> retrieveEvenNumber(int N){
+	 ArrayList<Integer> retrieveEvenNumber(int N){//3rd method
 		 return A1;
 	 }
- public static void main(String[] args) {
-		Problem1 p = new Problem1();
-		Scanner sc=new Scanner(System.in);
+ public static void main(String[] args) {//main method
+		Problem1 p = new Problem1();//object created
+		Scanner sc=new Scanner(System.in);//Scanner class object
 		System.out.println("enter value of N");
-		p.saveEvenNumbers(sc.nextInt());
+		p.saveEvenNumbers(sc.nextInt());//method calling
+	        p.retrieveEvenNumber(sc.nextInt());
 		p.printEvenNumbers();
  }
 }
