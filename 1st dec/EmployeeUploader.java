@@ -100,11 +100,13 @@ class DepartmentNotFoundException extends Exception{
 				int d_id=sc.nextInt();
                 Connection conn=Helper.con();//connection
 				Statement stmt=conn.createStatement(); 
+				System.out.println("employee details");
 		ResultSet rs=stmt.executeQuery("select * from Employee");
 		//iteration for employee details
 		while(rs.next()) {
 			System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getString(3)+" "+rs.getInt(4)+" "+rs.getInt(5)+" "+rs.getInt(6));
 		}
+				System.out.println("department details");
 		ResultSet rs1=stmt.executeQuery("select * from Department");
 		//iteration for department details
 		while(rs1.next()) {
