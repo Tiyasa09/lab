@@ -12,12 +12,6 @@ public class App
         ApplicationContext ac = new ClassPathXmlApplicationContext("spconfig.xml");
         
         Dao dao = ac.getBean("DaoImpl",Dao.class);
-//        Student st = new Student();
-//        st.setId(10);
-//        st.setName("Messi");
-//        st.setEmail("wc@gmail.com");
-//        st.setAge(35);
-//        st.setAddress("Spain");
         
         Student st2 = new Student();
         st2.setId(10);
@@ -25,9 +19,6 @@ public class App
         st2.setEmail("tiyasa@gmail.com");
         st2.setAge(24);
         st2.setAddress("Sonarpur");
-        
-//        int rs = dao.insert(st);
-//        System.out.println(rs);
         
         int rs2 = dao.insert(st2);
         System.out.println(rs2);
